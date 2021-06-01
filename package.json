@@ -1,0 +1,23 @@
+{
+  "name": "ind33d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "docker build . -t f4ls3/ind33d",
+    "stop": "docker stop ind33d && docker rm ind33d",
+    "deploy": "npm run build && docker run --name ind33d -d f4ls3/ind33d"
+  },
+  "keywords": [],
+  "author": "f4ls3",
+  "license": "ISC",
+  "dependencies": {
+    "discord-buttons": "^2.4.1",
+    "discord.js": "^12.5.3",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "dotenv": "^10.0.0"
+  }
+}
